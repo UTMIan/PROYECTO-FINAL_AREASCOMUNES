@@ -1,0 +1,76 @@
+/* styles.css */
+  
+  
+  /* Estilos para la barra de búsqueda */
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para la tabla */
+  .table {
+    width: 100%;
+  }
+  
+  /* Estilos para los botones de acción */
+  .btn-action {
+    font-size: 1.2rem;
+  }
+  
+  /* Estilos adicionales para la tabla en dispositivos pequeños */
+  @media (max-width: 768px) {
+    .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+  }
+  
+  /* Ajuste de margen en la tabla para dispositivos pequeños */
+  @media (max-width: 576px) {
+    .table {
+      margin-bottom: 0;
+    }
+  }
+
+  .navbar-custom {
+    background-color: #112989 !important;
+  }
+  
+  .navbar-brand {
+    color: #ffffff !important;
+    margin: auto !important;
+    display: block !important;
+    font-size:26px;
+    font-weight: bolder;
+  }
+  
+  
+  .navbar-button {
+    background-color: #0011ff; /* Cambia el color de fondo del botón */
+    color: #ffffff; /* Cambia el color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Ajusta el radio de borde según desees */
+    padding: 10px 20px; /* Ajusta el relleno del botón según desees */
+    font-size: 16px; /* Cambia el tamaño de la fuente del botón según desees */
+  }
+  
+  .navbar-button:hover {
+    background-color: #2b00e9; /* Cambia el color de fondo del botón al pasar el mouse */
+    color: #ffffff; /* Cambia el color del texto del botón al pasar el mouse */
+  }
+
+  .card-header{
+    color: #112989;
+    font-size: larger;
+    font-weight:700;
+    text-align: center;
+  }
+
+  .custom-header{
+    color:#112989;
+    }
+    
+.card{
+    margin-right: 30px;
+}
+  

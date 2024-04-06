@@ -1,0 +1,30 @@
+.btn-custom {
+    background-color: #112989 !important;
+    color: #ffffff !important;
+  }
+  
+.btn-custom:hover {
+    background-color: #1C4B80 !important;
+  color: #ffffff !important;
+}
+
+.card{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.card-header{
+  color: #112989;
+  font-size: larger;
+  font-weight:700;
+}
+
+.form-label{
+  color: #112989;
+  font-weight: 600;
+}
+
+.btn-custom {
+    background-color: #112989 !important;
+    color: #ffffff !important;
+  }
