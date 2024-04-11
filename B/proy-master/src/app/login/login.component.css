@@ -1,0 +1,41 @@
+* styles.css */
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  max-width: 180%;
+  max-height: 180px;
+  margin: auto; /* Alinea vertical y horizontalmente */
+  display: block; /* Asegura que el margen funcione correctamente */
+}
+
+.card {
+  width: 100%;
+  text-align: center; /* Centrar el contenido del card */
+}
+
+.card-header {
+  background-color: #ffffff;
+  color: #112989;
+  padding: 16px;
+  font-family: 'Helvetica', sans-serif; /* Fuente Helvetica */
+  font-size: 24px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.btn-primary {
+  background-color: #112989; /* Azul oscuro */
+  border-color: #2c3e50; /* Borde azul oscuro */
+  color: #ffffff; /* Texto blanco */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+}
+
+  .btn-primary:hover {
+    background-color: #1C4B80; /* Cambia el color al pasar el mouse */
+    border-color: #1C4B80; /* Borde en hover */
+  }

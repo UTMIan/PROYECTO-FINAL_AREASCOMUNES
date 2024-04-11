@@ -1,0 +1,46 @@
+<div class="card mt-5">
+    <div class="card-header">
+        {{this.isNew ? "Registrar nueva área común" : "Actualizar área común"}}
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="submitAreasComunes(forma)" #forma="ngForm" class="row g-3">
+           
+            <div class="col-md-6">
+                <label for="label-Nombre" class="form-label">Nombre de espacio:</label>
+                <input #inputnombre="ngModel" type="text" name="Nombre"
+                    [ngClass]="{'is-invalid': inputnombre.touched && inputnombre.hasError('required') }"
+                    [(ngModel)]="areascomunes.nombre" class="form-control" id="Nombre" value="" required>
+                <div class="invalid-feedback">
+                    Field required
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="label-Descripcion" class="form-label">Descripción:</label>
+                <input #inputdescripcion="ngModel" type="text" name="Descripcion"
+                    [ngClass]="{'is-invalid': inputdescripcion.touched && inputdescripcion.hasError('required') }"
+                    [(ngModel)]="areascomunes.descripcion" class="form-control" id="Descripcion" value="" required>
+                <div class="invalid-feedback">
+                    Field required
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="label-Capacidad" class="form-label">Capacidad de estudiantes:</label>
+                <input #inputcapacidad="ngModel" type="text" name="Capacidad"
+                    [ngClass]="{'is-invalid': inputcapacidad.touched && inputcapacidad.hasError('required') }"
+                    [(ngModel)]="areascomunes.capacidad" class="form-control" id="Capacidad" value="" required>
+                <div class="invalid-feedback">
+                    Field required
+                </div>
+            </div>
+            <div class="col-12 text-center">
+                <button class=" btn btn-custom" type="submit" [disabled]="forma.invalid">{{this.isNew ? "Registrar" :
+                    "Update"}}</button>
+                <button style="margin-left: 10px;" class=" btn btn-danger" type="button"
+                    (click)="limpiarForm(forma)">Limpiar formulario</button>
+                <button *ngIf="!this.isNew" style="margin-left: 10px;" class=" btn btn-danger" type="button"
+                    (click)="emitChange.emit()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<router-outlet></router-outlet>

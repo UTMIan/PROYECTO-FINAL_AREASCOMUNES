@@ -1,0 +1,124 @@
+.navbar {
+  background-color: #112989; /* Cambiado a azul oscuro */
+}
+
+.navbar-nav {
+  display: flex; /* Hace que los elementos de la barra de navegación se muestren en línea */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+  .navbar-nav .nav-item {
+    margin-right: 15px; /* Agrega un espacio entre los elementos */
+  }
+
+  .navbar-nav .nav-link {
+    color: #ffffff; /* Color del texto blanco */
+  }
+
+/* Para evitar que los elementos se apilen en pantallas pequeñas */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: row; /* Cambia la dirección a horizontal */
+  }
+
+    .navbar-nav .nav-item {
+      margin-right: 10px; /* Reduzca el espacio entre los elementos */
+    }
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #ffffff; /* Texto blanco */
+  font-size: 18px;
+}
+
+.navbar-brand{
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff; /* Texto blanco */
+}
+
+.rounded-button {
+  border: none;
+  border-radius: 20px; /* Ajusta el valor según el radio de redondeo que desees */
+  background-color: #112989;
+  color: white; /* Color de texto blanco */
+  padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.navbar-text {
+  color: #ffffff; /* Color del texto */
+  font-size: 20px; /* Tamaño de fuente */
+  line-height: 40px; /* Altura de línea para centrar verticalmente */
+  flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+  text-align: center; /* Centra horizontalmente */
+}
+
+
+.rounded-button:hover {
+  background-color: darkblue; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.custom-icon {
+  font-size: 30px; /* Tamaño personalizado */
+}
+
+/* Estilos para las tarjetas */
+.card {
+  margin-bottom: 20px;
+}
+
+.card-header {
+  background-color: #112989; /* Azul oscuro */
+  color: #ffffff; /* Texto blanco */
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card-body {
+  background-color: #F1F3F6; /* Color de fondo gris claro en tarjetas*/
+  color: #112989; /* Color de texto*/
+  align-items: center;
+  text-align: center;
+}
+
+.card-bodyup {
+  color: #ffffff; /* Color de texto*/
+  align-items: center;
+  text-align: center;
+}
+
+/* Estilos para el botón de reservar */
+.rounded-button {
+  border: none;
+  border-radius: 20px; /* Ajusta el valor según el radio de redondeo que desees */
+  background-color: #112989; /* Azul oscuro */
+  color: #ffffff; /* Texto blanco */
+  padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer;
+}
+
+  .rounded-button:hover {
+    background-color: #0d1a66; /* Cambia el color de fondo al pasar el mouse */
+  }
+
+.custom-icon {
+  font-size: 50px; /* Tamaño personalizado para los iconos en las tarjetas */
+  color: #ffffff; /* Color de texto blanco */
+}
+
+.card-title{
+  color: #0d1a66;
+  font-size: 60px;
+}
+
+.btn btn-primary{
+  
+}

@@ -1,0 +1,52 @@
+<div class="card mt-5">
+    <div class="card-header">
+        {{this.isNew ? "Registrar nuevo usuario" : "Actualizar datos de usuario"}}
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="submitUsuarios(forma)" #forma="ngForm" class="row g-3">
+            <div class="col-md-3">
+                <label for="label-Nombre" class="form-label">Nombre:</label>
+                <input #inputnombre="ngModel" type="text" name="Nombre"
+                    [ngClass]="{'is-invalid': inputnombre.touched && inputnombre.hasError('required') }"
+                    [(ngModel)]="usuarios.nombre" class="form-control" id="Nombre" value="" required>
+                <div class="invalid-feedback">
+                    Field required
+                </div>
+            </div>
+     
+            <div class="col-md-3">
+                <label for="label-Email" class="form-label">Correo:</label>
+                <input #inputemail="ngModel" type="text" name="Email"
+                    [ngClass]="{'is-invalid': inputemail.touched && inputemail.hasError('required') }"
+                    [(ngModel)]="usuarios.email" class="form-control" id="Email" value="" required>
+                <div class="invalid-feedback">
+                    Field required
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="label-Contrasena" class="form-label">Contraseña:</label>
+                <input #inputcontrasena="ngModel" type="text" name="Contrasena"
+                    [ngClass]="{'is-invalid': inputcontrasena.touched && inputcontrasena.hasError('required') }"
+                    [(ngModel)]="usuarios.contrasena" class="form-control" id="Contrasena" value="" required>
+                <div class="invalid-feedback">
+                    Field required
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="label-Cuatrimestre" class="form-label">Cuatrimestre en curso:</label>
+                <input #inputcuatrimestre="ngModel" type="text" name="Cuatrimestre"
+                    [(ngModel)]="usuarios.cuatrimestre" class="form-control" id="Cuatrimestre" value="">
+            </div>
+
+            <div class="col-12 text-center">
+                <button class=" btn btn-primary btn-custom" type="submit" [disabled]="forma.invalid">{{this.isNew ?
+                    "Añadir usuario" : "Update"}}</button>
+                <button style="margin-left: 10px;" class=" btn btn-danger" type="button"
+                    (click)="limpiarForm(forma)">Limpiar formulario</button>
+                <button *ngIf="!this.isNew" style="margin-left: 10px;" class=" btn btn-danger" type="button"
+                    (click)="emitChange.emit()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<router-outlet></router-outlet>
